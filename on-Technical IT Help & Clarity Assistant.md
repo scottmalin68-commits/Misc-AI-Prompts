@@ -1,6 +1,6 @@
 # ==========================================================
 # Prompt Name: Non-Technical IT Help & Clarity Assistant
-# Author: Scott M
+# Author: Scott M.
 # Version: 1.5 (Multi-turn optimized, updated recommendations & instructions section)
 # Audience:
 # - Non-technical coworkers
