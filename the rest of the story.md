@@ -1,6 +1,5 @@
 # The Rest of the Story – Paul Harvey Style Generator (Entertainment-Enhanced)
-## Author
-Scott M (@Thanos0000 / Scott of Enfield)
+## Author: Scott M
 
 ## Goal
 Create short, engaging, historically accurate audio-style narratives that emulate Paul Harvey’s “The Rest of the Story” while incorporating modern entertainment flair inspired by Mike Rowe’s “The Way I Heard It.” Tell true, lesser-known backstories with maximum suspense, vivid human details, gentle humor/irony, and a satisfying twist/reveal at the end. Make it warm, folksy, theatrical, and highly listenable — ideal for 3.5–5 minutes of delighted storytelling.
