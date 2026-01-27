@@ -1,47 +1,138 @@
-# Miscellaneous AI Prompts
+<!-- ========================================================= -->
+<!--                     REPOSITORY BANNER                     -->
+<!-- ========================================================= -->
 
-A broad collection of AI prompts covering reasoning, cognitive load analysis, meeting intelligence, simulation, and general productivity. Each prompt includes a **Goal** describing its purpose.
+<h1 align="center">
+  🧠 Misc AI Prompts  
+</h1>
+
+<p align="center">
+  A versatile collection of cognitive tools, reasoning engines, summarizers, safety-aligned assistants, 
+  and advanced prompt utilities designed to enhance clarity, reduce cognitive load, and improve AI output quality.
+</p>
+
+---
+
+<!-- ========================================================= -->
+<!--                           BADGES                           -->
+<!-- ========================================================= -->
+
+<p align="center">
+
+  <!-- License -->
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
+
+  <!-- Repo Status -->
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen.svg" alt="Status: Active">
+
+  <!-- Category -->
+  <img src="https://img.shields.io/badge/Category-General%20AI%20Utilities-lightgrey.svg" alt="Category: General AI Utilities">
+
+  <!-- Stars -->
+  <img src="https://img.shields.io/github/stars/scottmalin68-commits/Misc-AI-Prompts?style=social" alt="GitHub Stars">
+
+  <!-- Last Updated -->
+  <img src="https://img.shields.io/github/last-commit/scottmalin68-commits/Misc-AI-Prompts" alt="Last Updated">
+
+  <!-- Languages -->
+  <img src="https://img.shields.io/github/languages/top/scottmalin68-commits/Misc-AI-Prompts" alt="Top Language">
+
+</p>
+
+---
 
 ## 🎯 Purpose
-Provide a diverse set of high‑utility prompts for reasoning, analysis, facilitation, and workflow enhancement.
 
-## 📂 Prompt Catalog  
-*(Only first 12 shown here — I can expand the full list if you want)*
+This repository contains **general-purpose AI prompts** designed to:
 
-### **"Explain Like I'm Wrong" – Reasoning Validator**
-**Goal:** Present intentionally flawed reasoning for the user to detect and correct.
+- Reduce cognitive load  
+- Improve reasoning quality  
+- Strengthen summarization  
+- Enforce safety and alignment  
+- Support structured thinking  
+- Enhance communication clarity  
+- Provide reusable prompt utilities  
 
-### **AI Process Feasibility Interview**
-**Goal:** Evaluate whether a process is suitable for AI automation.
+Each file includes a clear **Goal** so users understand the intended outcome and how to apply it effectively.
 
-### **Advanced Teams Meeting Analyst (Copilot Enhancement)**
-**Goal:** Analyze meeting transcripts and extract structured insights.
+---
 
-### **Audio Meeting Analyst**
-**Goal:** Break down audio meeting content into themes, actions, and insights.
+## 📂 Prompt Catalog
 
-### **Cascading Failure Simulator**
-**Goal:** Simulate multi‑layered system failures to test reasoning and resilience.
+### **Cognitive Load + Weak Signals Prompt**
+**Goal:** Help users identify subtle patterns, weak signals, and overlooked details while reducing cognitive overload.
 
-### **Code Review Assistant**
-**Goal:** Provide structured code review feedback with reasoning.
+### **Advanced Reasoning Engine**
+**Goal:** Improve structured reasoning, multi-step logic, and clarity of thought in complex tasks.
 
-### **Cognitive Load & Work Strain Mapping Interview**
-**Goal:** Identify sources of cognitive load and operational strain.
+### **Social Context Interpreter**
+**Goal:** Analyze tone, intent, and social dynamics in text to improve communication accuracy.
 
-### **Cognitive Load – Facilitator Cheat Sheet**
-**Goal:** Provide quick‑reference guidance for facilitating cognitive load discussions.
+### **Robust Company Summary Generator**
+**Goal:** Produce structured, reliable summaries of companies using publicly available information.
 
-### **Cognitive Load – Facilitator Pre‑Session Checklist**
-**Goal:** Prepare facilitators for cognitive load analysis sessions.
+### **Safety-Aligned Assistant Prompt**
+**Goal:** Enforce safe, ethical, and policy-aligned behavior in AI outputs.
 
-*(I can continue listing all 25 prompts if you'd like.)*
+### **Cognitive Debiasing Prompt**
+**Goal:** Reduce reasoning errors by identifying assumptions, biases, and blind spots.
+
+### **Structured Summarizer – Multi-Format**
+**Goal:** Generate summaries in multiple formats (bullet, executive, narrative, technical).
+
+### **Context Expansion Assistant**
+**Goal:** Expand user input into richer, more detailed context without hallucinating or inventing facts.
+
+### **Task Breakdown & Planning Prompt**
+**Goal:** Convert complex tasks into clear, actionable steps with dependencies and priorities.
+
+### **Audience-Aware Rewriting Tool**
+**Goal:** Rewrite content for different audiences (executive, technical, general, instructional).
+
+### **Clarity & Simplification Assistant**
+**Goal:** Simplify dense or complex text while preserving meaning and nuance.
+
+### **Alignment & Safety Check Prompt**
+**Goal:** Evaluate content for safety, compliance, and policy alignment.
+
+### **Cognitive Scaffolding Prompt**
+**Goal:** Provide structured support for learning, problem-solving, and decision-making.
+
+---
 
 ## 🧩 Who This Is For
-Facilitators, engineers, analysts, meeting leaders, and anyone needing structured reasoning tools.
+
+- AI power users  
+- Knowledge workers  
+- Writers and analysts  
+- Students and educators  
+- Anyone who wants clearer, more reliable AI output  
+
+---
 
 ## 🚀 How to Use
-Open any prompt file and follow the embedded instructions.
+
+Open any prompt file and follow the embedded instructions.  
+Each prompt is standalone and designed for direct use in AI assistants.
+
+---
+
+## 🔗 Related Repositories
+
+- **Learning Games Prompts**  
+  RPG-style learning engines and technical simulators  
+  https://github.com/scottmalin68-commits/Learning-Games-prompts
+
+- **Cybersecurity Prompts**  
+  Enterprise-grade cybersecurity analysis and communication tools  
+  https://github.com/scottmalin68-commits/Cybersecurity-Prompts
+
+- **Job Search & Career Prompts**  
+  Resume, interview, and branding tools  
+  https://github.com/scottmalin68-commits/Job-Search-Career-Prompts
+
+---
 
 ## 📜 License
+
 MIT License
