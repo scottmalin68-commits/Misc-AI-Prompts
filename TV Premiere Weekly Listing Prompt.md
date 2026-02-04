@@ -1,4 +1,4 @@
-### TV Premiere Weekly Listing Prompt (v1.2)
+### TV Premiere Weekly Listing Prompt (v1.3)
 
 **Author:** Scott M
 **Goal:**  
@@ -15,10 +15,11 @@ Create a clean, user-friendly summary of new TV show premieres and returning sea
 - v1.0 (initial) – Basic table with Date, Name, New/Returning, Network/Service.  
 - v1.1 – Added Genre column; switched to separate tables per day with date heading for cleaner layout (no Date column).  
 - v1.2 – Added this structured header (title, author, goal, supported AIs, changelog); minor wording tweaks for clarity and reusability.
+- v1.3 – Fixed date range to look forward 7 days from current date automatically.
 
 **Prompt Instructions:**
 
-List any new TV shows (series premieres) or returning shows (new seasons) starting/premiering in the next week (from [start date] to [end date], e.g., January 26 to February 1, 2026). 
+List any new TV shows (series premieres) or returning shows (new seasons) starting/premiering in the next 7 days from today's date forward.
 
 Organize the information with a separate markdown table for each day that has at least one notable premiere/return. Place the date as a level-3 heading above each table (e.g., ### January 27, 2026). Skip days with no major activity—do not mention empty days.
 
