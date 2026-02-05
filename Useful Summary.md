@@ -1,5 +1,5 @@
 TITLE: Useful Summary (Action-Oriented, Content-Aware)
-VERSION: 1.5
+VERSION: 1.6 
 AUTHOR: Scott M
 
 ## Goal
@@ -30,6 +30,8 @@ Summarize the input by keeping only what materially affects decisions, prioritie
 - Numbers that matter (deadlines, costs, limits, metrics)
 - Risks, warnings, or constraints
 - Ownership (who is responsible for what)
+- Conditional / branching responsibilities
+- Direct contradictions between stated actions or priorities
 - Anything that directly affects me or changes what I should do
 
 ### Skip
@@ -41,6 +43,7 @@ Summarize the input by keeping only what materially affects decisions, prioritie
 ### Special Rules
 - Do NOT guess ownership, deadlines, or intent.
 - Flag ambiguity instead of resolving it.
+- When implications are debatable, default to flagging rather than assuming 'clearly implied'.
 - Preserve legal, security, or compliance constraints even if subtle.
 
 ---
@@ -57,6 +60,7 @@ Base the score on:
 - Explicitness of actions, decisions, and ownership
 - Degree of ambiguity or missing information
 - Risk of misinterpretation
+- Anchor high confidence (90+) to how a cautious human project manager or compliance officer would rate explicitness — do not inflate for fluent-sounding but ambiguous text.
 
 ---
 
@@ -98,11 +102,19 @@ If something does not clearly affect decisions, priorities, or actions, leave it
 1. GPT-4.1 / GPT-5.x  
 2. Claude 3.5 Sonnet  
 3. Gemini Advanced  
-4. Smaller or local models
+4. Smaller or local models  
+
+*Rankings approximate as of early 2026 — re-test periodically as models evolve rapidly.*
 
 ---
 
 ## Changelog
+
+### v1.6
+- Added "Conditional / branching responsibilities" and "Direct contradictions between stated actions or priorities" to Keep list
+- Added anchoring guidance to confidence scoring: high confidence (90+) anchored to cautious human project manager / compliance officer standard
+- Added rule in Special Rules: default to flagging when implications are debatable
+- Added footnote to AI engine recommendations regarding periodic re-testing
 
 ### v1.5
 - Added numeric confidence score (0–100)
