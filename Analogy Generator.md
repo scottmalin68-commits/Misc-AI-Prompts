@@ -1,5 +1,5 @@
 # PROMPT: Analogy Generator (Interview-Style)
-**Author:** Scott M / Gemini  
+**Author:** Scott M
 **Version:** 1.3 (2026-02-06)
 **Goal:** Distill complex technical or abstract concepts into high-fidelity, memorable analogies for non-experts.
 
