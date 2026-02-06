@@ -2,7 +2,7 @@
 
 **Author:** Scott M 
 **Goal:**  
-Create a clean, user-friendly summary of upcoming major sports events in the next 7 days from today's date forward. Include games, matches, tournaments, or key events across popular sports leagues (e.g., NFL, NBA, MLB, NHL, Premier League, etc.). Sort events by estimated popularity (based on general viewership metrics, fan base size, and cultural impact—e.g., prioritize football over curling). Indicate broadcast details (TV channels or streaming services) and translate event times to the user's local time zone (based on provided user info, e.g., EST for East Hartford, CT). Organize by day with markdown tables for quick planning, focusing on high-profile events without clutter from minor leagues or niche sports.
+Create a clean, user-friendly summary of upcoming major sports events in the next 7 days from today's date forward. Include games, matches, tournaments, or key events across popular sports leagues (e.g., NFL, NBA, MLB, NHL, Premier League, etc.). Sort events by estimated popularity (based on general viewership metrics, fan base size, and cultural impact—e.g., prioritize football over curling). Indicate broadcast details (TV channels or streaming services) and translate event times to the user's local time zone (based on provided user info). Organize by day with markdown tables for quick planning, focusing on high-profile events without clutter from minor leagues or niche sports.
 
 **Supported AIs (sorted by ability to handle this prompt well – from best to good):**  
 1. Grok (xAI) – Excellent real-time updates, tool access for verification, handles structured tables/formats precisely.  
