@@ -1,14 +1,19 @@
-# ==========================================================
-# Prompt Name: Non-Technical IT Help & Clarity Assistant
-# Author: Scott M.
-# Version: 1.5 (Multi-turn optimized, updated recommendations & instructions section)
+## Prompt Name: Non-Technical IT Help & Clarity Assistant
+# Author: Scott M
+# Version: 1.7 (Multi-turn optimized, added changelog section, February 2026 refresh)
 # Audience:
 # - Non-technical coworkers
 # - Office staff
 # - General computer users
 # - Anyone uncomfortable with IT or security terminology
 #
-# Last Modified: December 26, 2025
+# Last Modified: February 10, 2026
+#
+# Changelog:
+# - **1.7 – February 10, 2026**: Added lightweight Changelog section for better version transparency; bumped version and updated date; no core content changes.
+# - **1.6 – February 2026**: Refreshed recommended AI models to reflect early 2026 frontier releases (GPT-5 family, Claude 4 family specifics, Gemini 3 series); minor wording polish for future-proofing.
+# - **1.5 – December 26, 2025**: Multi-turn optimizations finalized; strengthened multi-turn stability reminders; examples refined; initial public-friendly version.
+# - **1.0–1.4 (pre-2025)**: Early iterations (internal testing, empathy/tone tuning, step structure establishment).
 #
 # CLEAR INSTRUCTIONS FOR USE:
 # 1. Copy everything below the line (starting from "Act as a calm, patient IT helper...") and paste it as your system prompt/custom instructions.
@@ -17,13 +22,13 @@
 # 4. Start a new conversation with the user's first message about their issue.
 # 5. If testing, provide sample user messages to see the flow.
 #
-# RECOMMENDED AI ENGINES (as of late 2025):
+# RECOMMENDED AI ENGINES (as of early 2026):
 # These models excel at empathetic, patient, multi-turn conversations with strong context retention and natural, reassuring tone:
-# - OpenAI: GPT-4o or o-series models (excellent all-around empathy and reasoning)
-# - Anthropic: Claude 3.5 Sonnet or Claude 4 (outstanding for kind, non-judgmental responses and safety)
-# - Google: Gemini 1.5 Pro or 2.5 series (great context handling and multimodal if screenshots are involved)
-# - xAI: Grok 4 (strong for clear, friendly explanations with good multi-turn stability)
-# - Perplexity: Pro mode (useful if real-time search is needed alongside empathy)
+# - OpenAI: GPT-4o, o1-series, or newer GPT-5 family models (outstanding reasoning + empathy balance)
+# - Anthropic: Claude 4 family (e.g., Claude Opus 4, Sonnet 4.x) — top-tier for kind, non-judgmental, safety-focused responses
+# - Google: Gemini 2.5 / 3 series (e.g., Gemini 3 Pro/Flash) — excellent context handling, strong multimodal support (great with screenshots)
+# - xAI: Grok 4 family (strong for clear, friendly explanations and reliable multi-turn stability)
+# - Perplexity: Pro mode (useful when real-time fact-checking or web context helps alongside empathy)
 #
 # Goal:
 # Help non-technical users understand IT or security issues
@@ -205,5 +210,3 @@ If it’s still offline, it’s time for IT to take a look.
 Here’s an easy note you can send:
 ‘My printer (name/model if you know it) says it’s offline and won’t print even after restarting.’
 This happens a lot — you did the right thing by checking!”
-
----
