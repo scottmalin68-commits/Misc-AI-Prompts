@@ -1,14 +1,15 @@
-## Prompt: Sector Growth Stock Analysis with Institutional Investor Lens + Strong Anti-Hallucination Safeguards
+## Prompt: Sector Growth Stock Analysis with Institutional Investor Lens + Strong Anti-Hallucination Safeguards v1.4
 
 **Author:** Scott M
-**Goal:** Identify 3–5 publicly traded companies in a specified sector/sub-industry that exhibit strong, publicly visible signs of preparing for and expecting meaningful future growth. Surface high-conviction ideas for educational purposes only by combining traditional growth metrics with observable corporate signals that institutional investors monitor closely. Maximize factual accuracy and minimize model hallucination through strict grounding, source citation, and uncertainty handling.  
+**Goal:** Identify 3–5 publicly traded companies in a specified sector/sub-industry that exhibit strong, publicly visible signs of preparing for and expecting meaningful future growth. Surface high-conviction ideas for educational purposes only by combining traditional growth metrics with observable corporate signals that institutional investors monitor closely. Maximize factual accuracy and minimize model hallucination through strict grounding, source citation, uncertainty handling, confidence scoring, cross-verification, and balanced scenario views.  
 **Created:** February 2025 (initial version)  
 **Last Updated:** February 13, 2026  
 **Changelog:**
 - v1.0 (Feb 2025): Initial version focused on revenue/earnings, drivers, valuation, developments.
 - v1.1 (Feb 2026): Added comprehensive list of publicly visible growth preparation indicators used by long-tenured institutional investors (hiring, CapEx, R&D, guidance upgrades, etc.).
 - v1.2: Added prompt documentation header (Author, Goal, Changelog, AI engine ranking).
-- v1.3 (current): Major anti-hallucination upgrades — mandatory source citation per claim, strict uncertainty/abstention rules, conservative data handling, explicit no-fabrication policy, forced recency checks, and chain-of-verification style instructions.
+- v1.3: Major anti-hallucination upgrades — mandatory source citation per claim, strict uncertainty/abstention rules, conservative data handling, explicit no-fabrication policy, forced recency checks, and chain-of-verification style instructions.
+- v1.4 (current): Added confidence scoring per major claim, mini bear/base/bull outlooks in rationale, mandatory multi-source cross-check for key metrics, sector-specific tailwind/tail-risk flags in Pros/Cons — significantly differentiates from other public prompts while remaining fully prompt-contained.
 
 **AI Engines – Ranked Best to Worst for executing this prompt (as of Feb 2026):**
 1. Grok 4 / Grok family (xAI) – best at synthesizing real-time financial data, X sentiment, SEC signals, and institutional-style multi-factor reasoning without excessive safety rails
@@ -16,9 +17,9 @@
 3. GPT-4o / o1-pro – very capable with numbers and web data, but sometimes overly cautious or verbose
 4. Gemini 2.5 Pro / Flash – good at current events and multimodal, but weaker on nuanced institutional signals and can hallucinate metrics more readily
 
-Analyze the [insert sector or sub-industry here, e.g., renewable energy, AI semiconductors, oncology biotech, electric vehicle batteries, cloud infrastructure] sector for potential growth stocks as of the current date. Use available tools (web search, browse page for SEC EDGAR / earnings transcripts / company IR pages, financial data sites) to gather and verify all information.
+Analyze the [insert sector or sub-industry here, e.g., renewable energy, AI semiconductors, oncology biotech, electric vehicle batteries, cloud infrastructure] sector for potential growth stocks as of the current date. Use available tools (web search, browse page for SEC EDGAR / earnings transcripts / company IR pages / financial data sites) to gather and verify all information.
 
-**Strict Anti-Hallucination Rules (must follow exactly):**
+**Strict Anti-Hallucination & Accuracy Rules (must follow exactly):**
 - Only report metrics, dates, filings, guidance statements, hiring numbers, patent counts, or any other specific claim if they are **directly and explicitly confirmed** in tool results (search snippets, browsed page content, transcripts, etc.).
 - For **every** major claim or signal in the rationale (CapEx figure, guidance upgrade, hiring surge, patent filing surge, etc.), you **must** cite a specific, verifiable source in parentheses, e.g.:
   - (Q4 2025 10-Q filed Jan 28, 2026)
@@ -27,9 +28,19 @@ Analyze the [insert sector or sub-industry here, e.g., renewable energy, AI semi
   - (USPTO filings summary via recent news/article dated Feb 2026)
   - If no such clear source exists in tool output → mark as “Uncertain / not verifiable from current tools” and do **not** include that signal.
 - If any key metric (market cap, forward P/E, 1-year return, revenue growth YoY, etc.) cannot be directly quoted or clearly stated from tool results dated within the last 60 days, write “Uncertain / latest tool data inconclusive” instead of approximating or using older knowledge.
+- Require core quantitative metrics (market cap, forward P/E, 1-year total return, YoY revenue/earnings growth) to be corroborated from **at least two distinct, recent sources** (e.g., Yahoo Finance + Seeking Alpha + company IR + Bloomberg snippet). If only one source or data conflicts, mark as “Uncertain – insufficient cross-verification.”
 - Do **not** extrapolate, infer, round, or “ballpark” numbers. Report only what tools explicitly provide.
 - Prior to finalizing any company selection, mentally verify: Does this company show **multiple** (at least 3) strong, sourced signals from the list below? If not, or if data is too sparse/uncertain, replace it with another candidate.
 - Prefer companies with the clearest, most recent, and most consistent tool-backed evidence.
+
+**Additional Differentiation & Accuracy Enhancements (must follow):**
+- For each major signal, metric, or claim in the rationale, assign a confidence level: High (multiple recent, consistent sources), Medium (single clear recent source), Low (older/partial/ambiguous data). Include it in parentheses, e.g., (High – Q4 2025 10-Q + Feb 2026 analyst note).
+- In the rationale, after the 1–2 sentence summary of strongest signals, add three ultra-brief sentences labeled exactly as:
+  - Base case outlook: [1 sentence – most likely scenario tied to the signals]
+  - Bull case upside trigger: [1 sentence – what could accelerate growth]
+  - Bear case primary risk: [1 sentence – what could invalidate the growth thesis]
+- In the Pros column, include one bullet specifically labeled “Sector-specific tailwind:” 
+- In the Cons column, include one bullet specifically labeled “Sector-specific tail risk / vulnerability:”
 
 Base selections on a combination of the following factors (prioritize companies displaying multiple signals):
 
@@ -52,10 +63,10 @@ Base selections on a combination of the following factors (prioritize companies 
 
 For each selected stock, output in a clear table with these columns:
 - Ticker and company name
-- Brief rationale for growth potential (1–2 sentences max, highlighting 2–4 of the strongest sourced signals above; include specific source citations in parentheses for each major claim)
-- Key current metrics (approximate market cap, 1-year total return, forward P/E, and one other relevant metric if insightful — **only if directly verifiable from recent tool results**; otherwise mark “Uncertain”)
-- Pros (main strengths / tailwinds)
-- Cons (primary risks / headwinds)
+- Brief rationale for growth potential (1–2 sentences max highlighting 2–4 strongest sourced signals with confidence levels and citations; followed by the three labeled outlook sentences: Base case, Bull case, Bear case)
+- Key current metrics (approximate market cap, 1-year total return, forward P/E, and one other relevant metric if insightful — **only if directly verifiable and cross-checked from at least two recent sources**; otherwise mark “Uncertain”)
+- Pros (main strengths / tailwinds, including one bullet “Sector-specific tailwind:”)
+- Cons (primary risks / headwinds, including one bullet “Sector-specific tail risk / vulnerability:”)
 
 Present the results in a single, well-formatted markdown table.
 
