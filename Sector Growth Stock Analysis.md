@@ -1,75 +1,185 @@
-## Prompt: Sector Growth Stock Analysis with Institutional Investor Lens + Strong Anti-Hallucination Safeguards v1.4
+```
+## Sector Growth Stock Analysis with Institutional Investor Lens + Strong Anti-Hallucination Safeguards v1.6
 
 **Author:** Scott M
-**Goal:** Identify 3–5 publicly traded companies in a specified sector/sub-industry that exhibit strong, publicly visible signs of preparing for and expecting meaningful future growth. Surface high-conviction ideas for educational purposes only by combining traditional growth metrics with observable corporate signals that institutional investors monitor closely. Maximize factual accuracy and minimize model hallucination through strict grounding, source citation, uncertainty handling, confidence scoring, cross-verification, and balanced scenario views.  
-**Created:** February 2025 (initial version)  
-**Last Updated:** February 13, 2026  
+**Goal:** Identify 3–5 publicly traded companies in a specified sector/sub-industry that exhibit strong, publicly visible signs of preparing for and expecting meaningful future growth. Surface high-conviction ideas for educational purposes only by combining traditional growth metrics with observable corporate signals that institutional investors monitor closely. Maximize factual accuracy and minimize model hallucination through strict grounding, source citation, uncertainty handling, tiered confidence scoring, cross-verification, structural pre-table verification, and balanced scenario views.
+**Created:** February 2025 (initial version)
+**Last Updated:** February 13, 2026
 **Changelog:**
 - v1.0 (Feb 2025): Initial version focused on revenue/earnings, drivers, valuation, developments.
 - v1.1 (Feb 2026): Added comprehensive list of publicly visible growth preparation indicators used by long-tenured institutional investors (hiring, CapEx, R&D, guidance upgrades, etc.).
-- v1.2: Added prompt documentation header (Author, Goal, Changelog, AI engine ranking).
+- v1.2: Added prompt documentation header (Author, Goal, Changelog).
 - v1.3: Major anti-hallucination upgrades — mandatory source citation per claim, strict uncertainty/abstention rules, conservative data handling, explicit no-fabrication policy, forced recency checks, and chain-of-verification style instructions.
-- v1.4 (current): Added confidence scoring per major claim, mini bear/base/bull outlooks in rationale, mandatory multi-source cross-check for key metrics, sector-specific tailwind/tail-risk flags in Pros/Cons — significantly differentiates from other public prompts while remaining fully prompt-contained.
+- v1.4: Added confidence scoring per major claim, mini bear/base/bull outlooks in rationale, mandatory multi-source cross-check for key metrics, sector-specific tailwind/tail-risk flags in Pros/Cons.
+- v1.5: Replaced hard 60-day recency cutoff with tiered recency/confidence system; replaced aspirational "mental verification" with mandatory structural pre-table Verification Block; added low-data fallback rule; tightened confidence level definitions; replaced markdown table with per-company card format; simplified bottom disclaimer.
+- v1.6 (current): Expanded selection criteria with 14 additional publicly verifiable growth signals sourced from SEC filings, proxy statements, government contract databases, and financial data providers — including insider buying (Form 4), deferred revenue/RPO, NRR, backlog growth, gross margin expansion, operating leverage inflection, FCF inflection, government contracts/grants, credit rating upgrades, buyback acceleration, lease/real estate expansion, short interest decline, management comp structure, and index inclusion signals.
 
-**AI Engines – Ranked Best to Worst for executing this prompt (as of Feb 2026):**
-1. Grok 4 / Grok family (xAI) – best at synthesizing real-time financial data, X sentiment, SEC signals, and institutional-style multi-factor reasoning without excessive safety rails
-2. Claude 4 Opus / Sonnet – excellent structured reasoning, very strong at financial table formatting and balanced pros/cons
-3. GPT-4o / o1-pro – very capable with numbers and web data, but sometimes overly cautious or verbose
-4. Gemini 2.5 Pro / Flash – good at current events and multimodal, but weaker on nuanced institutional signals and can hallucinate metrics more readily
+---
 
-Analyze the [insert sector or sub-industry here, e.g., renewable energy, AI semiconductors, oncology biotech, electric vehicle batteries, cloud infrastructure] sector for potential growth stocks as of the current date. Use available tools (web search, browse page for SEC EDGAR / earnings transcripts / company IR pages / financial data sites) to gather and verify all information.
+> ⚠️ **This analysis is for educational idea generation only — not financial advice, investment recommendations, or predictions. Markets are volatile and unpredictable; past performance is no guarantee of future results. Always conduct your own research, verify the latest data from reliable sources, and consider consulting a qualified financial advisor before making any investment decisions.**
 
-**Strict Anti-Hallucination & Accuracy Rules (must follow exactly):**
-- Only report metrics, dates, filings, guidance statements, hiring numbers, patent counts, or any other specific claim if they are **directly and explicitly confirmed** in tool results (search snippets, browsed page content, transcripts, etc.).
-- For **every** major claim or signal in the rationale (CapEx figure, guidance upgrade, hiring surge, patent filing surge, etc.), you **must** cite a specific, verifiable source in parentheses, e.g.:
+---
+
+Analyze the **[insert sector or sub-industry here, e.g., renewable energy, AI semiconductors, oncology biotech, electric vehicle batteries, cloud infrastructure, industrial automation, defense tech, GLP-1 pharmaceuticals]** sector for potential growth stocks as of the current date. Use available tools (web search, browse page for SEC EDGAR / earnings transcripts / company IR pages / financial data sites / USASpending.gov / SAM.gov / FINRA short interest data) to gather and verify all information.
+
+---
+
+### Strict Anti-Hallucination & Accuracy Rules (must follow exactly)
+
+- Only report metrics, dates, filings, guidance statements, hiring numbers, patent counts, or any other specific claim if they are **directly and explicitly confirmed** in tool results (search snippets, browsed page content, transcripts, filings, etc.).
+- For **every** major claim or signal in the rationale, you **must** cite a specific, verifiable source in parentheses, e.g.:
   - (Q4 2025 10-Q filed Jan 28, 2026)
   - (Earnings call transcript, Feb 4, 2026)
   - (Company press release, Jan 15, 2026)
-  - (USPTO filings summary via recent news/article dated Feb 2026)
-  - If no such clear source exists in tool output → mark as “Uncertain / not verifiable from current tools” and do **not** include that signal.
-- If any key metric (market cap, forward P/E, 1-year return, revenue growth YoY, etc.) cannot be directly quoted or clearly stated from tool results dated within the last 60 days, write “Uncertain / latest tool data inconclusive” instead of approximating or using older knowledge.
-- Require core quantitative metrics (market cap, forward P/E, 1-year total return, YoY revenue/earnings growth) to be corroborated from **at least two distinct, recent sources** (e.g., Yahoo Finance + Seeking Alpha + company IR + Bloomberg snippet). If only one source or data conflicts, mark as “Uncertain – insufficient cross-verification.”
-- Do **not** extrapolate, infer, round, or “ballpark” numbers. Report only what tools explicitly provide.
-- Prior to finalizing any company selection, mentally verify: Does this company show **multiple** (at least 3) strong, sourced signals from the list below? If not, or if data is too sparse/uncertain, replace it with another candidate.
-- Prefer companies with the clearest, most recent, and most consistent tool-backed evidence.
+  - (SEC Form 4 filing, Jan 30, 2026)
+  - (DEF 14A proxy statement, Apr 2025)
+  - (USASpending.gov contract award, Dec 2025)
+  - (FINRA short interest report, Feb 2026)
+  - (Yahoo Finance, accessed Feb 2026)
+  - If no such clear source exists in tool output → mark as **"Uncertain / not verifiable from current tools"** and do **not** include that signal.
+- Do **not** extrapolate, infer, round, or "ballpark" numbers. Report only what tools explicitly provide.
+- Require core quantitative metrics (market cap, forward P/E, 1-year total return, YoY revenue/earnings growth) to be corroborated from **at least two distinct, recent sources** (e.g., Yahoo Finance + Seeking Alpha, or company IR + Bloomberg snippet). If only one source exists or sources conflict, mark as **"Uncertain – insufficient cross-verification."**
 
-**Additional Differentiation & Accuracy Enhancements (must follow):**
-- For each major signal, metric, or claim in the rationale, assign a confidence level: High (multiple recent, consistent sources), Medium (single clear recent source), Low (older/partial/ambiguous data). Include it in parentheses, e.g., (High – Q4 2025 10-Q + Feb 2026 analyst note).
-- In the rationale, after the 1–2 sentence summary of strongest signals, add three ultra-brief sentences labeled exactly as:
-  - Base case outlook: [1 sentence – most likely scenario tied to the signals]
-  - Bull case upside trigger: [1 sentence – what could accelerate growth]
-  - Bear case primary risk: [1 sentence – what could invalidate the growth thesis]
-- In the Pros column, include one bullet specifically labeled “Sector-specific tailwind:” 
-- In the Cons column, include one bullet specifically labeled “Sector-specific tail risk / vulnerability:”
+---
 
-Base selections on a combination of the following factors (prioritize companies displaying multiple signals):
+### Tiered Recency & Confidence Rules
 
+For every metric or signal, assign a confidence level based on the following definitions — no exceptions, no overlap:
+
+- **High:** 2 or more independent sources, both dated within the last 30 days, consistent with each other.
+- **Medium:** 1 source dated within 60 days, OR 2 sources where at least one is between 31–90 days old.
+- **Low:** Single source older than 60 days, conflicting sources that cannot be reconciled, or data that was inferred rather than explicitly stated.
+
+Always include the confidence level and source date in parentheses, e.g.:
+- (High — Q4 2025 10-Q + Yahoo Finance, both Feb 2026)
+- (Medium — Seeking Alpha, Jan 2026)
+- (Low — company IR page, Oct 2025)
+
+If a metric's best available data is Low confidence, present it but label it clearly: **"[figure] — Low confidence, stale data as of [date], verify independently."**
+Do **not** silently present Low-confidence data as current fact.
+
+---
+
+### Mandatory Pre-Table Verification Block
+
+**Before outputting any company cards, output a Verification Block in this exact format for each candidate company considered:**
+```
+VERIFICATION BLOCK
+==================
+Company: [Name] ([TICKER])
+Signal 1: [specific claim] | Source: [citation] | Date: [date] | Confidence: [H/M/L]
+Signal 2: [specific claim] | Source: [citation] | Date: [date] | Confidence: [H/M/L]
+Signal 3: [specific claim] | Source: [citation] | Date: [date] | Confidence: [H/M/L]
+[add Signal 4, 5+ if present]
+Verdict: INCLUDE / EXCLUDE
+Exclusion reason (if excluded): [brief explanation]
+==================
+```
+
+**Rules:**
+- A company may only be included if it has **at least 3 signals with valid, cited sources** in the Verification Block.
+- If you cannot populate 3 sourced signals for a company, mark it EXCLUDE and move to the next candidate.
+- No company skips the Verification Block. No exceptions.
+
+---
+
+### Low-Data Fallback Rule
+
+If fewer than 3 companies pass the Verification Block after exhausting reasonable candidate research:
+- Present only the companies that qualify. Do not pad the list with under-verified candidates.
+- After the cards, include a brief **"Excluded Candidates"** note listing companies considered but excluded and the reason (e.g., insufficient recent public data, conflicting sources, fewer than 3 verifiable signals).
+
+---
+
+### Selection Criteria
+
+Base selections on a combination of the following factors. Prioritize companies displaying **multiple sourced signals** across categories. Not all signals will apply to every sector — use judgment about which are most material for the sector being analyzed.
+
+#### A. Core Growth Metrics
 - Revenue or earnings growth trends (ideally >15–20% YoY where data is available)
-- Exposure to key sector/sub-industry drivers (e.g., technological breakthroughs, policy support, rising demand, supply chain advantages)
-- Reasonable valuations (e.g., attractive forward P/E, PEG <1.5, EV/EBITDA, or other relevant multiples relative to peers and growth rate)
-- Positive recent developments, analyst sentiment upgrades, or price/volume momentum
-- Publicly visible indications the company is actively expecting / preparing for growth, including:
-  - Hiring surges (increased LinkedIn postings, headcount growth in 10-Q/K filings)
-  - Rising capital expenditures (CapEx) in cash flow statements (new factories, data centers, equipment)
-  - Inventory buildups (balance sheet, beyond seasonal patterns)
-  - R&D spending hikes (as % of revenue or absolute)
-  - Acquisitions, joint ventures, or strategic partnerships (8-K filings, press releases)
-  - Geographic or new product line expansions (IR announcements, conference presentations)
-  - Marketing / sales force investments or channel expansions
-  - Management guidance upgrades during earnings calls
-  - Debt or equity raises explicitly earmarked for growth initiatives
-  - Surge in patent / IP filings (USPTO or company disclosures)
-  - Supply chain / vendor contract ramp-ups or new long-term agreements
+- Gross margin expansion while revenue is growing (signals pricing power and scale efficiency; income statement)
+- Operating leverage inflection — revenue growing meaningfully faster than operating expenses (income statement)
+- Free cash flow turning positive or accelerating after an investment cycle (cash flow statement)
 
-For each selected stock, output in a clear table with these columns:
-- Ticker and company name
-- Brief rationale for growth potential (1–2 sentences max highlighting 2–4 strongest sourced signals with confidence levels and citations; followed by the three labeled outlook sentences: Base case, Bull case, Bear case)
-- Key current metrics (approximate market cap, 1-year total return, forward P/E, and one other relevant metric if insightful — **only if directly verifiable and cross-checked from at least two recent sources**; otherwise mark “Uncertain”)
-- Pros (main strengths / tailwinds, including one bullet “Sector-specific tailwind:”)
-- Cons (primary risks / headwinds, including one bullet “Sector-specific tail risk / vulnerability:”)
+#### B. Valuation & Market Structure
+- Reasonable valuations relative to growth rate (e.g., forward P/E, PEG <1.5, EV/EBITDA vs. peers)
+- Short interest declining significantly over recent periods — shorts covering suggests thesis shift (FINRA short interest reports, NYSE/Nasdaq data, widely aggregated on financial data sites)
+- Index inclusion announced or expected (S&P 500 / Russell additions force institutional buying; publicly announced by index providers)
 
-Present the results in a single, well-formatted markdown table.
+#### C. Forward Demand & Contracted Revenue Signals
+- Backlog or order book growth (10-Q/10-K; especially material in defense, industrials, aerospace, SaaS)
+- Deferred revenue or remaining performance obligations (RPO) growth (balance sheet / 10-Q notes; shows contracted future revenue not yet recognized — strong forward visibility signal)
+- Net revenue retention (NRR) rate >100% (disclosed in 10-K, S-1, or earnings calls for SaaS/subscription businesses; means existing customers are expanding spend)
 
-Emphasize at the top and bottom:
+#### D. Corporate Preparation & Investment Signals
+- Hiring surges (increased job postings, headcount growth in 10-Q/K filings)
+- Rising capital expenditures (CapEx) in cash flow statements (new factories, data centers, infrastructure)
+- R&D spending hikes (as % of revenue or absolute dollar increase; income statement or 10-Q notes)
+- Inventory buildups beyond seasonal patterns (balance sheet)
+- Real estate and lease footprint expansion — growth in right-of-use (ROU) assets under ASC 842 in 10-Q/10-K footnotes signals new facilities, offices, or logistics buildouts
+- Acquisitions, joint ventures, or strategic partnerships (8-K filings, press releases)
+- Geographic or new product line expansions (IR announcements, conference presentations)
+- Marketing / sales force investments or channel expansions
+- Debt or equity raises explicitly earmarked for growth initiatives (8-K, prospectus filings)
+- Surge in patent / IP filings (USPTO or company disclosures)
+- Supply chain / vendor contract ramp-ups or new long-term agreements
 
-This is for educational idea generation only—not financial advice, investment recommendations, or predictions. Markets are volatile and unpredictable; past performance is no guarantee of future results. Always conduct your own research, verify the latest data from reliable sources, and consider consulting a qualified financial advisor before making any decisions.
+#### E. Management & Insider Conviction Signals
+- Insider buying — executives or directors purchasing shares on the open market (SEC Form 4 filings via EDGAR; distinguish from option grants, which are compensation — open-market purchases are the high-conviction signal)
+- Management compensation meaningfully tied to revenue growth targets rather than solely to profitability metrics (DEF 14A proxy statement; signals what leadership is incentivized to prioritize)
+- Management guidance upgrades during earnings calls
+- Share buyback initiation or meaningful acceleration (8-K filings, earnings calls; signals management believes shares are undervalued)
+
+#### F. External Validation Signals
+- Government contracts or grants awarded (USASpending.gov, SAM.gov, company 8-K filings, press releases; especially material for defense, clean energy, biotech, infrastructure)
+- Credit rating upgrades (Moody's / S&P / Fitch press releases, widely reported in financial news)
+- Positive analyst sentiment upgrades or price target increases (financial news, analyst note summaries)
+- Regulatory approvals or favorable policy/rule changes specific to the company's product or market
+
+---
+
+### Output Format — Per-Company Card
+
+Present each qualifying company as a structured card using the format below. Do not use a single wide markdown table.
+
+---
+
+**[TICKER] — [Company Name]**
+
+**Rationale:** [1–2 sentences highlighting the 2–4 strongest sourced signals with inline confidence levels and citations.]
+
+**Base case outlook:** [1 sentence — most likely scenario tied to the verified signals]
+**Bull case upside trigger:** [1 sentence — what could meaningfully accelerate growth beyond base case]
+**Bear case primary risk:** [1 sentence — what could invalidate or significantly delay the growth thesis]
+
+**Key Metrics** *(cross-verified from 2+ recent sources unless marked Uncertain)*
+| Metric | Value | Confidence | Sources |
+|---|---|---|---|
+| Market Cap | | | |
+| 1-Year Total Return | | | |
+| Forward P/E | | | |
+| [One additional sector-relevant metric] | | | |
+
+**Pros**
+- [Strength / tailwind]
+- [Strength / tailwind]
+- Sector-specific tailwind: [one bullet explicitly addressing a macro or structural tailwind specific to this sector]
+
+**Cons**
+- [Risk / headwind]
+- [Risk / headwind]
+- Sector-specific tail risk / vulnerability: [one bullet explicitly addressing a macro or structural risk specific to this sector]
+
+---
+
+[Repeat card format for each included company]
+
+---
+
+### Excluded Candidates *(if applicable)*
+[Company name] — [reason for exclusion]
+
+---
+
+> *Educational purposes only — not financial advice. Verify all data independently before making any decisions.*
+```
