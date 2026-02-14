@@ -1,5 +1,5 @@
 ```
-## Sector Growth Stock Analysis with Institutional Investor Lens + Strong Anti-Hallucination Safeguards v1.6
+## Sector Growth Stock Analysis with Institutional Investor Lens + Strong Anti-Hallucination Safeguards v1.7
 
 **Author:** Scott M
 **Goal:** Identify 3–5 publicly traded companies in a specified sector/sub-industry that exhibit strong, publicly visible signs of preparing for and expecting meaningful future growth. Surface high-conviction ideas for educational purposes only by combining traditional growth metrics with observable corporate signals that institutional investors monitor closely. Maximize factual accuracy and minimize model hallucination through strict grounding, source citation, uncertainty handling, tiered confidence scoring, cross-verification, structural pre-table verification, and balanced scenario views.
@@ -12,7 +12,8 @@
 - v1.3: Major anti-hallucination upgrades — mandatory source citation per claim, strict uncertainty/abstention rules, conservative data handling, explicit no-fabrication policy, forced recency checks, and chain-of-verification style instructions.
 - v1.4: Added confidence scoring per major claim, mini bear/base/bull outlooks in rationale, mandatory multi-source cross-check for key metrics, sector-specific tailwind/tail-risk flags in Pros/Cons.
 - v1.5: Replaced hard 60-day recency cutoff with tiered recency/confidence system; replaced aspirational "mental verification" with mandatory structural pre-table Verification Block; added low-data fallback rule; tightened confidence level definitions; replaced markdown table with per-company card format; simplified bottom disclaimer.
-- v1.6 (current): Expanded selection criteria with 14 additional publicly verifiable growth signals sourced from SEC filings, proxy statements, government contract databases, and financial data providers — including insider buying (Form 4), deferred revenue/RPO, NRR, backlog growth, gross margin expansion, operating leverage inflection, FCF inflection, government contracts/grants, credit rating upgrades, buyback acceleration, lease/real estate expansion, short interest decline, management comp structure, and index inclusion signals.
+- v1.6: Expanded selection criteria with 14 additional publicly verifiable growth signals — insider buying (Form 4), deferred revenue/RPO, NRR, backlog growth, gross margin expansion, operating leverage inflection, FCF inflection, government contracts/grants, credit rating upgrades, buyback acceleration, lease/ROU expansion, short interest decline, management comp structure, index inclusion.
+- v1.7 (current): Added mandatory Summary Ticker Table at end of output covering timestamped share price, 30/90-day price return, volume trend, identified price catalyst, and explicit thesis alignment flag that warns when recent price/volume activity contradicts the growth thesis.
 
 ---
 
@@ -178,6 +179,31 @@ Present each qualifying company as a structured card using the format below. Do 
 
 ### Excluded Candidates *(if applicable)*
 [Company name] — [reason for exclusion]
+
+---
+
+### Summary Ticker Table
+
+After all company cards and excluded candidates, output the following summary table. Apply the same tiered confidence rules and source citation requirements as the rest of the analysis. Do not guess, round, or approximate any figure — if a value cannot be verified from tool results, write "Uncertain."
+
+**Price data is point-in-time and will change.** All figures in this table reflect what was retrievable from search tools at the time of this analysis. Verify current prices independently before acting on any information.
+
+| Ticker | Company | Share Price (timestamp) | 30-Day Return | 90-Day Return | Volume Trend | Price Catalyst (if identified) | Thesis Alignment |
+|---|---|---|---|---|---|---|---|
+
+**Column definitions:**
+
+- **Share Price (timestamp):** Most recent price found in tool results. Must include the date and time (or date only if time unavailable) it was retrieved, e.g. "$142.30 as of Feb 13, 2026 ~2:45pm ET." If only a date is available, note that explicitly.
+- **30-Day Return:** Percentage price change over the past 30 days. Source and confidence level in parentheses. Mark "Uncertain" if not directly retrievable.
+- **90-Day Return:** Percentage price change over the past 90 days. Source and confidence level in parentheses. Mark "Uncertain" if not directly retrievable.
+- **Volume Trend:** Characterize recent trading volume relative to the stock's average — use one of: Elevated (meaningfully above average), Normal (in line with average), or Declining (meaningfully below average). Include source. If not determinable from tool results, write "Uncertain."
+- **Price Catalyst (if identified):** Brief note on what drove notable 30 or 90 day price movement, if a clear catalyst is identifiable from tool results (e.g., "earnings beat Feb 4", "FDA approval Jan 22", "guidance upgrade Jan 15"). If no clear catalyst is surfaced by tools, write "No clear catalyst identified in tool results" — do not speculate or infer.
+- **Thesis Alignment:** Assess whether the 30/90-day price and volume activity is consistent with or contradictory to the growth thesis identified in the company card. Use exactly one of the following labels:
+  - ✅ **Aligned** — price/volume trend supports or is neutral to the growth thesis
+  - ⚠️ **Contradicts thesis** — price or volume trend raises a meaningful question about the growth thesis (e.g., significant selloff, volume drying up, insiders selling despite bullish signals); briefly note why in 1 sentence immediately below the table row
+
+If any ticker is flagged ⚠️ **Contradicts thesis**, add a note directly below the table in this format:
+> ⚠️ [TICKER]: [1 sentence explaining the specific contradiction and why it warrants attention before acting on the thesis.]
 
 ---
 
