@@ -10,12 +10,13 @@ Reusable AI prompt frameworks for productivity, communication, structured thinki
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Last_Updated-2026--02--08-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Last_Updated-2026--02--19-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge">
   <img src="https://img.shields.io/badge/Category-General_Prompts-purple?style=for-the-badge">
   <img src="https://img.shields.io/badge/Type-AI_Frameworks-orange?style=for-the-badge">
   <img src="https://img.shields.io/badge/Mode-Utility-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/Mode-Facilitator_Ready-purple?style=for-the-badge">
+  <img src="https://img.shields.io/github/stars/scottmalin68-commits/Misc-AI-Prompts?style=for-the-badge">
 </p>
 
 ---
@@ -169,11 +170,10 @@ Below is the categorized prompt catalog with **goal statements** for clarity and
 - Improved clarity and governance alignment  
 - Updated last‑updated badge  
 
-### **v1.3 — January 2026**
-- Added Cyber Blue banner  
-- Unified README structure  
-- Added featured prompt section  
-- Standardized cross‑repo navigation  
+### **v1.5 — February 2026**
+- Added dynamic GitHub stars badge  
+- Added Quick Start usage section  
+- Refreshed last-updated badge date  
 
 ---
 
@@ -185,6 +185,8 @@ Below is the categorized prompt catalog with **goal statements** for clarity and
 - 🧭 Profile → https://github.com/scottmalin68-commits  
 
 ---
+
+**Quick Start:** Copy any prompt .md → paste into Grok, Claude, ChatGPT, etc. → follow the instructions and respond iteratively. Most are self-contained and ready for personal or facilitator use.
 
 # 📜 License  
 MIT License — see `LICENSE` for details.
