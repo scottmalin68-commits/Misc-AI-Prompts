@@ -1,4 +1,4 @@
-# AI KICKSTART PROMPT (V1.4)
+# AI Kickstart prompt (V1.4)
 # Author: Scott M
 # Goal: One prompt to turn any novice into a productive AI user.
 
