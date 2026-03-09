@@ -9,6 +9,9 @@
     export (JSON) and provide a prioritized, triaged roadmap for workstation 
     restoration following a clean Windows installation.
 
+.Companion file
+	Companion file SystemInventory.ps1 at https://github.com/scottmalin68-commits/Powershell_Scripts/blob/main/SystemInventory.ps1
+	
 .CHANGELOG
     v1.0 - Initial release.
     v1.1 - Added JSON-specific parsing instructions.
