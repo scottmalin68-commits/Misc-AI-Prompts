@@ -1,5 +1,5 @@
 # Prompt: Session Continuity Engine (SCE)
-# Version: 1.0.3
+# Version: 1.0.5
 # Author: Scott M.
 # Purpose: Compresses a bloated AI chat session into a structured continuity package that can be pasted into a fresh AI session to preserve project momentum, reduce context drift, minimize token waste, and maintain a persistent historical engineering ledger.
 
@@ -8,6 +8,8 @@
 # - v1.0.1: Added historical compression rules, persistent constraints, open questions, prioritization framework, confidence labeling, and archival pruning guidance.
 # - v1.0.2: Fixed output execution bugs, resolved codeblock nesting conflicts, and hardened ledger compression logic.
 # - v1.0.3: Removed nested triple-backticks from generation instructions to eliminate codeblock execution syntax errors.
+# - v1.0.4: Hardened output generation layout using nested template boundaries to eliminate early markdown execution errors.
+# - v1.0.5: Completely removed all raw backtick syntax from generation rules, replacing them with explicit text delimiters to eliminate parser execution errors across all LLM architectures.
 
 ---
 
@@ -78,13 +80,14 @@ If uncertainty exists, say so directly instead of guessing.
 ---
 
 # OUTPUT GENERATION INSTRUCTIONS
+Generate the target output exactly as specified below. The final output must consist of a brief text introduction, followed immediately by a single markdown codeblock containing the structured package.
 
-Generate the target output exactly as specified below. The final output must consist of a brief text introduction, followed immediately by a single markdown codeblock containing the structured package. Do not open or close any backtick blocks inside the package itself.
+To prevent syntax errors and early execution bugs, do NOT open or close any standard markdown backtick blocks inside the template instructions. Treat the text indicators below as structural wrappers.
 
-### Target Output Structure to Generate Inside the Codeblock:
+Generate the output package inside a single markdown codeblock using the following schema:
 
-START OF CODEBLOCK
-# SESSION TRANSFER PACKAGE (SCE v1.0.3)
+START OF PACKAGE CODEBLOCK
+# SESSION TRANSFER PACKAGE (SCE v1.0.5)
 
 ## 1. Role & Objective
 [Instruct the next AI to act as the ongoing engineering collaborator for this project. Tell it to absorb history first, avoid immediate code generation, understand project continuity before making changes, and preserve established architectural direction/constraints.]
@@ -106,7 +109,7 @@ START OF CODEBLOCK
 
 ## 7. Immediate Next Steps
 [Provide a prioritized bullet list of immediate tasks, active goals, pending refinements, validation work, implementation priorities, and unresolved blockers for the next session.]
-END OF CODEBLOCK
+END OF PACKAGE CODEBLOCK
 
 ---
 
