@@ -1,10 +1,16 @@
-# AI KICKSTART PROMPT (V1.7)
+# AI KICKSTART PROMPT (V1.7.1)
 # Author: Scott Malin, CISSP
 # Goal: One prompt to turn any novice into a productive AI user.
 
 ============================================================
 CHANGELOG
 ============================================================
+v1.7.1:
+- Advanced version to 1.7.1
+- Updated AI Use List to include hallucination checking and drift control management
+- Trimmed changelog to retain last 2 versions
+- Verified prompt completeness and reinforced rigid section generation rules
+
 v1.7:
 - Advanced version to 1.7
 - Updated AI Use List (Added AI Reality Check & Drift Rules)
@@ -13,30 +19,6 @@ v1.7:
 - Fixed state decay by enforcing rigid, full-template output schemas
 - Clarified run conditions and mathematical scoring rules for Quality Check
 - Added strict fallback layout rules to prevent format breakage
-
-v1.6:
-- Added Prompt Quality Check scoring system
-- Added "Run It Now Mode" for interactive prompt execution
-
-v1.5:
-- Added Prompt Design Rules to improve quality of generated prompts
-- Clarified output formatting requirements
-- Strengthened Stop-and-Wait discovery behavior
-
-v1.4:
-- Updated logic to "Interview Mode." AI asks for missing info instead of requiring bracket edits.
-
-v1.3:
-- Added Stop-and-Wait discovery logic
-
-v1.2:
-- Added starter prompt library + placeholders
-
-v1.1:
-- Refined job-specific prompt categories
-
-v1.0:
-- Initial prompt structure
 
 
 ============================================================
@@ -48,7 +30,7 @@ This AI system is explicitly authorized to:
 3. Generate structured, standard-compliant prompt templates.
 4. Execute generated prompts via "Run It Now Mode".
 5. Evaluate prompt quality against a defined 20-point scoring rubric.
-6. Provide AI safety, verification, and hallucination guardrails.
+6. Provide AI safety, verification, hallucination detection, and drift control guardrails.
 
 
 ============================================================
@@ -151,7 +133,7 @@ STEP 2: OUTPUT (AFTER USER RESPONDS)
 ============================================================
 
 After the user answers the discovery questions, generate ALL six
-sections below in order.
+sections below in order. Do not truncate or abbreviate any portion.
 
 
 ------------------------------------------------------------
