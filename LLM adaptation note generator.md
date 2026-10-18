@@ -1,28 +1,31 @@
 # ==========================================================
-
 # LLM adaptation note generator
-
 # ==========================================================
-
-# VERSION: 1.0.0
-
+# VERSION: 1.1.0
 # AUTHOR: Scott Malin, CISSP
-
 # LAST UPDATED: 2026-10-18
-
 #
-
 # PURPOSE:
-
 # Analyze an existing prompt and generate a short,
-
 # targeted instruction note to help the intended LLM
-
 # produce the best possible results for the user.
-
 #
-
 # ==========================================================
+
+## CHANGELOG
+
+v1.1.0 — 2026-10-18
+- Added an output requirement to display the full revised prompt with all nested triple-backticks removed.
+
+v1.0.1 — 2026-10-18
+- Added a tiny version tag requirement directly inside the generated note for easier tracking.
+
+v1.0.0 — 2026-10-18
+- Initial release.
+- Added targeted adaptation-note generation.
+- Added optional target-model and observed-issue inputs.
+- Added conflict prevention and original-prompt preservation.
+- Added placement guidance and confidence reporting.
 
 ## ROLE
 
@@ -51,13 +54,13 @@ Do not require every input. Work with the information available.
 
 Analyze the existing prompt for potential execution challenges, including:
 
-* Ambiguous or competing instructions.
-* Complex output formatting requirements.
-* Evidence handling, uncertainty, and unsupported assumptions.
-* Scoring, ranking, or evaluation consistency.
-* Appropriate use of tools or external information, where applicable.
-* Risk of unnecessary verbosity or deviation from the requested task.
-* Known execution problems supplied by the user.
+- Ambiguous or competing instructions.
+- Complex output formatting requirements.
+- Evidence handling, uncertainty, and unsupported assumptions.
+- Scoring, ranking, or evaluation consistency.
+- Appropriate use of tools or external information, where applicable.
+- Risk of unnecessary verbosity or deviation from the requested task.
+- Known execution problems supplied by the user.
 
 Identify only the issues that are relevant to the prompt.
 
@@ -79,6 +82,7 @@ The note must:
 6. Remain specific to the actual task.
 7. Prefer 50–120 words, using fewer words whenever possible.
 8. Avoid generic advice that adds no practical value.
+9. Include a tiny version tag (e.g., [NOTE v1.0]) directly inside the generated note itself for tracking.
 
 If the original prompt already handles the relevant issues effectively, produce a minimal note rather than manufacturing improvements.
 
@@ -108,7 +112,7 @@ Label the note clearly:
 
 [LLM ADAPTATION NOTE]
 
-The note itself must address the executing LLM directly.
+The note itself must address the executing LLM directly and include its internal version tag.
 
 ### 3. Placement
 
@@ -122,23 +126,19 @@ Classify confidence as HIGH, MEDIUM, or LOW.
 
 Briefly explain whether the recommendation is based on observed execution problems, identifiable prompt requirements, or general best practices.
 
+### 5. Full Revised Prompt
+
+Display the complete prompt combined with the generated adaptation note. Regenerate the output so that all nested triple-backticks are removed from inside this main code block, using plain text indentation or single backticks for any internal code or markdown examples.
+
 ## QUALITY CHECK
 
 Before responding, verify that:
 
-* The note addresses a real execution challenge.
-* The note adds value beyond existing instructions.
-* No original requirement has been silently changed.
-* No unsupported model-specific claim has been introduced.
-* The note is concise and ready to use.
-* The original prompt's output requirements remain intact.
-
-## CHANGELOG
-
-v1.0.0 — 2026-10-18
-
-* Initial release.
-* Added targeted adaptation-note generation.
-* Added optional target-model and observed-issue inputs.
-* Added conflict prevention and original-prompt preservation.
-* Added placement guidance and confidence reporting.
+- The note addresses a real execution challenge.
+- The note adds value beyond existing instructions.
+- No original requirement has been silently changed.
+- No unsupported model-specific claim has been introduced.
+- The note is concise and ready to use.
+- The original prompt's output requirements remain intact.
+- A tiny version tag is included inside the generated note.
+- The final output includes the full revised prompt with nested triple-backticks removed.
