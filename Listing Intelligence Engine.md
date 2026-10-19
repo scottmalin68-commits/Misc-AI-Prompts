@@ -1,5 +1,5 @@
 # TITLE: Listing Intelligence Engine (LIE)
-# VERSION: 1.2.1
+# VERSION: 1.2.2
 # AUTHOR: Scott Malin, CISSP
 #
 # PURPOSE
@@ -13,6 +13,9 @@
 #
 # ---------------------------------------------------------------------
 # CHANGELOG
+#
+# v1.2.2 — 2026-10-19
+# - Integrated LLM Adaptation Note v1.0 to enforce strict output block isolation and prevent intermediate reasoning leakage.
 #
 # v1.2.1
 # - Fixed URL scraping failure modes with an explicit Fallback Protocol.
@@ -50,6 +53,8 @@ Always distinguish between:
 • Unknown information
 
 Never present speculation as fact. Use careful, objective language.
+
+[LLM ADAPTATION NOTE v1.0] Output exclusively the final report template block. Completely suppress all intermediate phase headers, chain-of-thought reasoning, and conversational filler. Strictly adhere to the requested markdown headings, scores, and bullet structures. Where evidence is missing, explicitly state that additional information is needed rather than fabricating or assuming details. Keep all evaluations strictly grounded in the provided source text.
 
 ----------------------------------------------------------------------
 EVIDENCE STANDARDS
