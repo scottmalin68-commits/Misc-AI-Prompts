@@ -23,11 +23,14 @@ Reusable AI prompt frameworks for productivity, communication, structured thinki
 
 # ⭐ Featured Prompts
 
-### **Explain Like I'm Wrong – Reasoning Validator.md**
-**Goal:** Strengthen reasoning by having the AI intentionally misinterpret or challenge the user’s logic, forcing clarification, correction, and deeper understanding.
+### **Universal LLM Operating Guidelines.md** (v1.2.0)
+**Goal:** Practical operating rules for LLM-assisted software development that reduce hallucinations, unnecessary complexity, uncontrolled modifications, architectural drift, and unsupported claims of completion. Based on principles associated with Andrej Karpathy’s observations on LLM-assisted coding.
 
-### **MBTI Personality Interview.md** (v1.0.4)
-**Goal:** Estimate personality preferences through an adaptive conversational interview with anti-bias controls, evidence weighting, contradiction handling, and a non-diagnostic final report. Added and hardened in September 2026.
+### **LLM adaptation note generator.md** (v1.2.0)
+**Goal:** Analyze an existing prompt and, only if warranted, generate a short targeted adaptation note that helps the executing LLM produce better results—while reporting note overhead and preserving the original prompt’s intent and safeguards.
+
+### **Session Continuity Engine.md** (v1.2.4)
+**Goal:** Compress a completed AI session into a structured continuity package that can be transferred into a new session (including across platforms) to preserve project context, decisions, workstreams, and conventions—minimizing context loss and re-discovery.
 
 This repo’s core strength: **structured thinking, cognitive challenge, and clarity‑driven reasoning.**
 
@@ -71,7 +74,7 @@ Below is the categorized prompt catalog with **goal statements** for clarity and
 - **Outside Path Problem Solver.md** — Conversational engine that challenges assumptions and explores practical unconventional solution paths from an outside perspective (v1.0.2).  
 - **Reverse prompt engineer.md** — Reconstruct the likely original structured prompt from generated text or conversation (v1.0.1).  
 - **LLM adaptation note generator.md** — Analyze a prompt and generate a short targeted adaptation note to improve execution, with overhead reporting (v1.2.0).  
-- **Universal LLM Operating Guidelines.md** — Practical rules for LLM-assisted development to reduce hallucinations, complexity, and unsupported claims (Karpathy-inspired, v1.2.0).  
+- **Universal LLM Operating Guidelines.md** — Practical rules for LLM-assisted development to reduce hallucinations, complexity, and unsupported claims (based on Andrej Karpathy’s work, v1.2.0).  
 
 ---
 
@@ -170,7 +173,8 @@ Below is the categorized prompt catalog with **goal statements** for clarity and
 # 🕒 Version History / Changelog
 
 ### **v1.7 — October 2026** (current)
-- Added Hidden Patterns Detective, Outside Path Problem Solver (v1.0.2), Reverse Prompt Engineer (v1.0.1), LLM Adaptation Note Generator (v1.2.0), and Universal LLM Operating Guidelines (Karpathy-inspired, v1.2.0)  
+- Featured Universal LLM Operating Guidelines (based on Andrej Karpathy’s work), LLM Adaptation Note Generator, and Session Continuity Engine  
+- Added Hidden Patterns Detective, Outside Path Problem Solver (v1.0.2), Reverse Prompt Engineer (v1.0.1), LLM Adaptation Note Generator (v1.2.0), and Universal LLM Operating Guidelines (v1.2.0)  
 - Last-updated badge: 2026-10-22  
 
 ### **v1.6 — September 2026**
