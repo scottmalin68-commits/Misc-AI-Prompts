@@ -1,9 +1,14 @@
 # ==========================================================
 # Partial Compliance Risk Analyzer
 # ==========================================================
-# VERSION: 1.0.1
+# VERSION: 1.0.3
 # AUTHOR: Scott Malin, CISSP
 # LAST UPDATED: 2026-10-24
+#
+# CHANGELOG:
+# - 1.0.3: Added explicit rules in Stage 6 and Section 6 to increment target prompt versions and update changelogs during rewrites.
+# - 1.0.2: Advanced version number and added changelog section.
+# - 1.0.1: Initial structured prompt release.
 #
 # PURPOSE:
 # Identify structural weaknesses in prompts that may cause an
@@ -45,11 +50,11 @@ Complete the following stages in order.
 
 ### STAGE 1 — REQUIREMENT EXTRACTION
 Identify distinct instructions, constraints, prohibitions, conditional rules, and formatting requirements. Group minor repetitive rules or decompose complex compound constraints into atomic requirements only where necessary for clarity.
-* Record for material requirements: ID (e.g., R001), Requirement, Type, Scope, Verification method, and Dependencies.
+- Record for material requirements: ID (e.g., R001), Requirement, Type, Scope, Verification method, and Dependencies.
 
 ### STAGE 2 — STRUCTURAL RISK ANALYSIS
 Evaluate vulnerabilities across key categories (Instruction Overload, Constraint Stacking, Instruction Burial, Hierarchy/Priority, Conditional Complexity, Cross-Section Dependencies, Output Complexity, Exactness Requirements, Negative Constraints, End-State Requirements, Ambiguity, Contradictions, Feasibility, Verification Gaps, and Semantic Drift).
-* For each material finding, provide: Risk ID, Category, Affected Requirement IDs, Relevant Passage, Explanation, Likely Failure Mode, Severity (Critical, High, Medium, Low), and Recommended Mitigation. If a category presents no material risk, state that briefly without forced findings.
+- For each material finding, provide: Risk ID, Category, Affected Requirement IDs, Relevant Passage, Explanation, Likely Failure Mode, Severity (Critical, High, Medium, Low), and Recommended Mitigation. If a category presents no material risk, state that briefly without forced findings.
 
 ### STAGE 3 — CONFLICT AND FEASIBILITY REVIEW
 Classify relevant issues as Compliance Risk, Ambiguity, Conflict, Feasibility Risk, or Verification Risk. Propose clear rationales or highlight decisions requiring user clarification.
@@ -62,7 +67,8 @@ List prioritized changes addressing identified risks, preferring explicit instru
 
 ### STAGE 6 — REWRITE THE COMPLETE PROMPT
 Produce a complete, optimized replacement for the supplied prompt inside a single code block.
-* **Strict Fidelity Guardrail:** Preserve exact schema structures, tags, JSON keys, enums, workflow steps, and operational logic. Do not truncate essential sections or alter underlying formatting rules.
+- **Version & Changelog Rule:** Increment the version number of the rewritten target prompt (e.g., bump patch or minor version) and add or update a changelog entry in its header detailing the specific fixes made.
+- **Strict Fidelity Guardrail:** Preserve exact schema structures, tags, JSON keys, enums, workflow steps, and operational logic. Do not truncate essential sections or alter underlying formatting rules.
 
 ### STAGE 7 — TRACEABILITY SUMMARY (CONDITIONAL)
 Provide a concise summary table or bulleted mapping verifying that all critical high-risk requirements from Stage 1 have been successfully preserved and addressed in the rewritten prompt, avoiding excessive line-by-line redundancy for minor rules.
@@ -77,5 +83,5 @@ Return the analysis in this order:
 3. **SECTION 3 — PARTIAL COMPLIANCE RISK ANALYSIS** (Material vulnerabilities and mitigations)
 4. **SECTION 4 — CONFLICT AND FEASIBILITY REVIEW** (Unresolved conflicts or ambiguities)
 5. **SECTION 5 — REMEDIATION PLAN** (Prioritized adjustments)
-6. **SECTION 6 — COMPLETE REVISED PROMPT** (Full replacement prompt in a single code block preserving exact schema/logic)
+6. **SECTION 6 — COMPLETE REVISED PROMPT** (Full replacement prompt in a single code block with incremented version, updated changelog, and preserved schema/logic)
 7. **SECTION 7 — TRACEABILITY SUMMARY** (Concise validation check)
